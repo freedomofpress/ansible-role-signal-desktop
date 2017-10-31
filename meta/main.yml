@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: Conor Schaefer (@conorsch)
+  description: Installs Signal Desktop on Linux hosts.
+  company: Freedom of the Press Foundation (@freedomofpress)
+  license: MIT
+  min_ansible_version: 2.4
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+
+  galaxy_tags:
+    - chat
+    - communications
+    - desktop
+    - encryption
+    - im
+    - secure
+    - signal
+    - workstation
+dependencies: []
