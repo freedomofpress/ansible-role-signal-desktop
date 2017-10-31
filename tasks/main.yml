@@ -1,5 +1,11 @@
 ---
 # tasks file for signal-desktop
+- name: Installs apt repo prerequisites.
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ signal_desktop_apt_dependencies }}"
+
 - name: Install Signal apt repo GPG key.
   apt_key:
     data: "{{ lookup('file', 'signal-apt-key.asc') }}"
@@ -11,4 +17,7 @@
     repo: "{{ signal_desktop_apt_repo }}"
     state: present
 
-
+- name: Installs Signal desktop.
+  apt:
+    name: signal-desktop
+    state: present
