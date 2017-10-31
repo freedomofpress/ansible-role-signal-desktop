@@ -1,2 +1,14 @@
 ---
 # tasks file for signal-desktop
+- name: Install Signal apt repo GPG key.
+  apt_key:
+    data: "{{ lookup('file', 'signal-apt-key.asc') }}"
+    state: present
+    keyring: /etc/apt/trusted.gpg.d/signal-desktop.gpg
+
+- name: Add Signal apt repo.
+  apt_repository:
+    repo: "{{ signal_desktop_apt_repo }}"
+    state: present
+
+

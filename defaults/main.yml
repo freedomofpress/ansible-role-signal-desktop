@@ -1,2 +1,7 @@
 ---
-# defaults file for signal-desktop
+signal_desktop_gpg_fingerprint: ''
+signal_desktop_apt_repo: "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main"
+
+signal_desktop_apt_packages:
+  - signal-desktop
+
