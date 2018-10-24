@@ -6,7 +6,6 @@ signal_desktop_gpg_fingerprint: "DBA36B5181D0C816F630E889D980A17457F6FB06"
 # Prerequisites for configuring HTTPS apt repo.
 signal_desktop_apt_dependencies:
   - apt-transport-https
-  - gpg
 
 # Pinning the Xenial repo, works fine on e.g. Debian Stretch.
 # The Signal team does not maintain specific versions for other dists,
